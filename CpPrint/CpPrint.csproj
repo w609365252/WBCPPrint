@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9CBF69D8-C61C-41DD-B58C-637CED278A35}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BetingSystem</RootNamespace>
+    <AssemblyName>BetingSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <Optimize>false</Optimize>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="cloudscribe.HtmlAgilityPack, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\cloudscribe.HtmlAgilityPack.1.0.1\lib\net46\cloudscribe.HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="CSkin, Version=14.7.2.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\CSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="HttpHelper, Version=1.9.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\HttpHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.MSScriptControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Debug\Interop.MSScriptControl.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\CSharpHelper.1.1.0\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\CSharpHelper.1.1.0\lib\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\CSharpHelper.1.1.0\lib\System.Net.Http.WebRequest.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Apis\IApi.cs" />
+    <Compile Include="Apis\YunShengApi.cs" />
+    <Compile Include="FormFindHWnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFindHWnd.designer.cs">
+      <DependentUpon>FormFindHWnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_InputDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_InputDialog.Designer.cs">
+      <DependentUpon>Form_InputDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JiXuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JiXuan.Designer.cs">
+      <DependentUpon>JiXuan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListViewText.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManyBet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManyBet.Designer.cs">
+      <DependentUpon>ManyBet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="StaticDelegate.cs" />
+    <Compile Include="FrmTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTest.Designer.cs">
+      <DependentUpon>FrmTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmExeManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmExeManager.Designer.cs">
+      <DependentUpon>FrmExeManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFileUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFileUp.designer.cs">
+      <DependentUpon>FrmFileUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrcColor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrcColor.Designer.cs">
+      <DependentUpon>FrmPrcColor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrcImg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrcImg.Designer.cs">
+      <DependentUpon>FrmPrcImg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReg.Designer.cs">
+      <DependentUpon>FrmReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmScSo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmScSo.Designer.cs">
+      <DependentUpon>FrmScSo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSpy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSpy.Designer.cs">
+      <DependentUpon>FrmSpy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmWebSpy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmWebSpy.Designer.cs">
+      <DependentUpon>FrmWebSpy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageObject.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools\CateTool.cs" />
+    <Compile Include="Tools\DateTimeTools.cs" />
+    <Compile Include="ViewModel\BetRecord.cs" />
+    <Compile Include="ViewModel\Config.cs" />
+    <Compile Include="ViewModel\LoginUser.cs" />
+    <Compile Include="ViewModel\OpenNext.cs" />
+    <Compile Include="ViewModel\OpenRecord.cs" />
+    <Compile Include="ViewModel\Order.cs" />
+    <Compile Include="ViewModel\PlayRule.cs" />
+    <Compile Include="WindowsApi.cs" />
+    <EmbeddedResource Include="FormFindHWnd.resx">
+      <DependentUpon>FormFindHWnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_InputDialog.resx">
+      <DependentUpon>Form_InputDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTest.resx">
+      <DependentUpon>FrmTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmExeManager.resx">
+      <DependentUpon>FrmExeManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFileUp.resx">
+      <DependentUpon>FrmFileUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrcColor.resx">
+      <DependentUpon>FrmPrcColor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrcImg.resx">
+      <DependentUpon>FrmPrcImg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReg.resx">
+      <DependentUpon>FrmReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmScSo.resx">
+      <DependentUpon>FrmScSo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSpy.resx">
+      <DependentUpon>FrmSpy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmWebSpy.resx">
+      <DependentUpon>FrmWebSpy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JiXuan.resx">
+      <DependentUpon>JiXuan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManyBet.resx">
+      <DependentUpon>ManyBet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BaiduShurufa_2014-8-2_16-32-58.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Skin\00001[800x90x24BPP].jpg" />
+    <EmbeddedResource Include="Skin\1.jpg" />
+    <EmbeddedResource Include="Skin\2.jpg" />
+    <EmbeddedResource Include="Skin\3.jpg" />
+    <EmbeddedResource Include="Skin\4.jpg" />
+    <EmbeddedResource Include="Skin\5.jpg" />
+    <EmbeddedResource Include="Skin\6.jpg" />
+    <EmbeddedResource Include="Skin\7.jpg" />
+    <EmbeddedResource Include="Skin\8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgPer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgColor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgNorml.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgBai.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\156.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\142.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\171.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgXz.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\154.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\141.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Crp.Tools1.4\Crp.Tools.csproj">
+      <Project>{7A3A02BC-BA3E-4B45-8A28-98C81F39BB41}</Project>
+      <Name>Crp.Tools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Html\img\icon_lottery.png" />
+    <Content Include="Html\img\text_lottery.png" />
+    <Content Include="Html\index.html" />
+    <Content Include="logo.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
